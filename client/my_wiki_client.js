@@ -1,16 +1,17 @@
-console.log(Wiki.find().count());
+Template.editor.helpers({
+	'docid' : function(){
+		var doc = Wiki.findOne();
+		if (doc){
+			return doc._id;
+		}
+		else{
+			return undefined;
+		}
+	}
 
-  Template.editor.helpers({
-    counter: function () {
+});
 
-    }
-  });
-
-  Template.editor.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-
-    }
-  });
+Template.editor.events({
+});
 
 

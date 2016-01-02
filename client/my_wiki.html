@@ -3,11 +3,15 @@
 </head>
 
 <body>
-  <h1>Welcome to My Editor!</h1>
+  <h1>Welcome to My Wiki Editor!</h1>
 
   {{> editor}}
 </body>
 
 <template name="editor">
-
+	<div class="container">
+	  	<div class="jumbotron">
+			{{> sharejsCM docid=docid id="editor"}}
+		</div>
+	</div>
 </template>
