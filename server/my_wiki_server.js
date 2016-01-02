@@ -1,5 +1,11 @@
 
   Meteor.startup(function () {
     // code to run on server at startup
-    console.log("you are running server");
-  });
+    
+    Meteor.startup(function(){
+    	if (!Wiki.findOne()){
+    		Wiki.insert({title:"new document"});
+    	}
+    });
+
+  }); 

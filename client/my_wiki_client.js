@@ -1,4 +1,4 @@
-
+console.log(Wiki.find().count());
 
   Template.editor.helpers({
     counter: function () {
