@@ -4,9 +4,13 @@
 
 <body>
   <h1>Welcome to My Wiki Editor!</h1>
-
+  {{> display_date}}
   {{> editor}}
 </body>
+
+<template name="display_date">
+	<h3>current time is </h3>{{date}}
+</template>
 
 <template name="editor">
 	<div class="container">

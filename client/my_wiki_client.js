@@ -1,5 +1,10 @@
+Meteor.setInterval(function(){
+	Session.set("current_date",new Date());
+},1000);
+
+
 Template.editor.helpers({
-	'docid' : function(){
+	docid: function(){
 		var doc = Wiki.findOne();
 		if (doc){
 			return doc._id;
@@ -9,6 +14,13 @@ Template.editor.helpers({
 		}
 	}
 
+
+});
+
+Template.display_date.helpers({
+	date: function(){
+		return Session.get("current_date");
+	}
 });
 
 Template.editor.events({
