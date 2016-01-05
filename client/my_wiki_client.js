@@ -12,7 +12,15 @@ Template.editor.helpers({
 		else{
 			return undefined;
 		}
-	}
+	},
+	config: function(){
+		return function(editor) {
+			editor.on('change',function(){
+				//console.log(editor.getValue());
+				$("#preview_content").contents().find("html").html(editor.getValue());
+			});
+		}
+	} 
 
 
 });

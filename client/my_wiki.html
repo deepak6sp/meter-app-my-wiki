@@ -33,8 +33,10 @@
 </template>
 
 <template name="editor">
-	{{> sharejsCM docid=docid id="editor"}}
+	{{> sharejsCM docid=docid id="editor" onRender=config}}
 </template>
 <template name="preview">
-	{{> sharejsCM docid=docid id="editor"}}
+	<iframe id="preview_content">
+		
+	</iframe>
 </template>
