@@ -3,3 +3,4 @@ Meteor.startup(function(){
 		Wiki.insert({title:"new document"});
 	}
 });
+

@@ -18,6 +18,7 @@ Template.editor.helpers({
 			editor.on('change',function(){
 				//console.log(editor.getValue());
 				$("#preview_content").contents().find("html").html(editor.getValue());
+				Meteor.call("addEditingUser");
 			});
 		}
 	} 
