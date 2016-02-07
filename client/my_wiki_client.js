@@ -49,7 +49,9 @@ Template.editingUsers.helpers({
 			i++;
 		}
 		console.log("users - "+JSON.stringify(users));
-		return users;
+		if (Meteor.user()){
+			return users;
+		}
 	}
 
 });
